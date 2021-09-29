@@ -15,8 +15,6 @@ import UpdateButton from '../../components/global/UpdateButton'
 import LargeButton from '../../components/global/LargeButton'
 import colors from '../../../assets/colors'
 
-const screenHeight = Dimensions.get('screen').height
-
 const HomeScreen = ({ navigation }) => {
     return (
         <SafeAreaView style={{ flex: 1 }}>
