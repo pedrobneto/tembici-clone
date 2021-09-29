@@ -7,10 +7,12 @@ import {
 } from 'react-native'
 import colors from '../../../assets/colors'
 
-const LargeButton = ({ title, onPress, disabled }) => {
+const LargeButton = ({ title, onPress, disabled, color }) => {
+
+
     return (
         <TouchableOpacity
-            style={[styles.container, { backgroundColor: disabled ? 'rgba(248, 5, 130, 0.5)' : colors.pink }]}
+            style={[styles.container, { backgroundColor: disabled ? 'rgba(248, 5, 130, 0.5)' : color ? color : colors.pink }]}
             onPress={onPress}
         >
             <Text style={styles.titleText}>
