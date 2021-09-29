@@ -6,6 +6,7 @@ import RegisterScreen from '../screens/RegisterScreen'
 import BackButton from '../components/global/BackButton'
 import colors from '../../assets/colors'
 import FinishRegScreen from '../screens/FinishRegScreen'
+import HomeScreen from '../screens/HomeScreen'
 
 const Stack = createNativeStackNavigator()
 
@@ -44,6 +45,14 @@ const AuthRoutes = (props) => {
                 name='FinishRegScreen'
                 component={FinishRegScreen}
                 options={{ title: 'Crie sua conta' }}
+            />
+            {/*
+                TELAS DO APP (ADICIONARIA REDUX PARA CONTROLAR AS ROUTES)
+            */}
+            <Stack.Screen
+                name='HomeScreen'
+                component={HomeScreen}
+                options={{ headerShown: false }}
             />
         </Stack.Navigator>
     )

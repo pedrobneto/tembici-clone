@@ -84,7 +84,7 @@ const RegisterScreen = ({ navigation }) => {
                 <View style={styles.btnContainer}>
                     <LargeButton
                         title='Continuar'
-                        onPress={() => navigation.navigate('FinishRegScreen')}
+                        onPress={() => navigation.navigate('HomeScreen')}
                     />
                 </View>
             </ScrollView>
