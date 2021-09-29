@@ -5,6 +5,7 @@ import LoginScreen from '../screens/LoginScreen'
 import RegisterScreen from '../screens/RegisterScreen'
 import BackButton from '../components/global/BackButton'
 import colors from '../../assets/colors'
+import FinishRegScreen from '../screens/FinishRegScreen'
 
 const Stack = createNativeStackNavigator()
 
@@ -38,6 +39,11 @@ const AuthRoutes = (props) => {
                 name='RegisterScreen'
                 component={RegisterScreen}
                 options={{ title: 'Cadastre-se' }}
+            />
+            <Stack.Screen
+                name='FinishRegScreen'
+                component={FinishRegScreen}
+                options={{ title: 'Crie sua conta' }}
             />
         </Stack.Navigator>
     )

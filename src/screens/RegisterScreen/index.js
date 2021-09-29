@@ -10,7 +10,7 @@ import colors from '../../../assets/colors'
 import LargeButton from '../../components/global/LargeButton'
 import Dash from '../../components/register/Dash'
 
-const RegisterScreen = (props) => {
+const RegisterScreen = ({ navigation }) => {
 
     const [password, setPassword] = useState('')
     const [showPass, setShowPass] = useState(false)
@@ -79,6 +79,7 @@ const RegisterScreen = (props) => {
                 <LargeButton
                     title='Continuar'
                     disabled={password.length < 8 ? true : false}
+                    onPress={() => navigation.navigate('FinishRegScreen')}
                 />
             </View>
         </View>
