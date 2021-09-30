@@ -4,9 +4,11 @@ import WelcomeScreen from '../screens/WelcomeScreen'
 import LoginScreen from '../screens/LoginScreen'
 import RegisterScreen from '../screens/RegisterScreen'
 import BackButton from '../components/global/BackButton'
-import colors from '../../assets/colors'
 import FinishRegScreen from '../screens/FinishRegScreen'
 import HomeScreen from '../screens/HomeScreen'
+import ChoosePlanScreen from '../screens/ChoosePlanScreen'
+
+import colors from '../../assets/colors'
 
 const Stack = createNativeStackNavigator()
 
@@ -53,6 +55,11 @@ const AuthRoutes = (props) => {
                 name='HomeScreen'
                 component={HomeScreen}
                 options={{ headerShown: false }}
+            />
+            <Stack.Screen
+                name='ChoosePlanScreen'
+                component={ChoosePlanScreen}
+                options={{ title: 'Pedale conosco' }}
             />
         </Stack.Navigator>
     )

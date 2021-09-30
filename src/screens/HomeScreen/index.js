@@ -35,6 +35,7 @@ const HomeScreen = ({ navigation }) => {
                             </Text>
                             <LargeButton
                                 title='Escolher um plano'
+                                onPress={() => navigation.navigate('ChoosePlanScreen')}
                                 color={colors.blue}
                             />
                         </View>
