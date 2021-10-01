@@ -1,5 +1,6 @@
 import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
+
 import WelcomeScreen from '../screens/WelcomeScreen'
 import LoginScreen from '../screens/LoginScreen'
 import RegisterScreen from '../screens/RegisterScreen'
@@ -7,6 +8,7 @@ import BackButton from '../components/global/BackButton'
 import FinishRegScreen from '../screens/FinishRegScreen'
 import HomeScreen from '../screens/HomeScreen'
 import ChoosePlanScreen from '../screens/ChoosePlanScreen'
+import PlanListScreen from '../screens/PlanListScreen'
 
 import colors from '../../assets/colors'
 
@@ -60,6 +62,11 @@ const AuthRoutes = (props) => {
                 name='ChoosePlanScreen'
                 component={ChoosePlanScreen}
                 options={{ title: 'Pedale conosco' }}
+            />
+            <Stack.Screen
+                name='PlanListScreen'
+                component={PlanListScreen}
+                options={({ route }) => ({ title: route.params.title })}
             />
         </Stack.Navigator>
     )

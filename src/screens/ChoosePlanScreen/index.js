@@ -15,7 +15,7 @@ import Card from '../../components/choosePlan/Card'
 import Plans from '../../../assets/data/Plans'
 import colors from '../../../assets/colors'
 
-const ChoosePlanScreen = (props) => {
+const ChoosePlanScreen = ({ navigation }) => {
 
     const cardAnimation = useRef(new Animated.Value(0)).current
     const [loading, setLoading] = useState(true)
@@ -63,6 +63,14 @@ const ChoosePlanScreen = (props) => {
                                 animValue={cardAnimation}
                                 index={index}
                                 key={index}
+                                onPress={() => navigation.navigate(
+                                    'PlanListScreen',
+                                    {
+                                        plans: plan.options,
+                                        color: plan.color,
+                                        title: plan.name
+                                    })
+                                }
                             />
                         ))
                     )}
