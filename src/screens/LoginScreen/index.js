@@ -10,7 +10,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons'
 import LargeButton from '../../components/global/LargeButton'
 import colors from '../../../assets/colors'
 
-const LoginScreen = (props) => {
+const LoginScreen = ({ navigation }) => {
 
     const [showPass, setShowPass] = useState(false)
 
@@ -46,6 +46,7 @@ const LoginScreen = (props) => {
             </View>
             <LargeButton
                 title='Entrar'
+                onPress={() => navigation.navigate('HomeScreen')}
             />
         </View>
     )
